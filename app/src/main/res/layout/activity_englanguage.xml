@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnglanguageActivity">
+
+    <!--Bottom Nav-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavtab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/bottomnav"
+        app:menu="@menu/menu_bottom_navigation"/>
+    <!-- /Bottom Nav -->
+
+    <!--header-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:background="@color/background"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtdashboard"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/backimage"
+            android:text="Safe Migration and Emergency Information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <!--<ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/backimage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back" /> -->
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/backimage"
+            android:background="@drawable/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <Button
+            android:id="@+id/infomyan"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="80dp"
+            android:layout_below="@+id/txtdashboard"
+            android:text="မြန်မာ"
+            android:textSize="10sp"
+            android:textColor="@color/background"
+            android:layout_width="80dp"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/infoeng"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="80dp"
+            android:layout_below="@+id/txtdashboard"
+            android:text="English"
+            android:textSize="10sp"
+            android:textColor="@color/background"
+            android:layout_width="80dp"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+    <!-- /header -->
+
+    <!--list view -->
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- /list view -->
+
+    <!-- Image View -->
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="420dp"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="100dp"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:background="@drawable/iomimg"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="100dp"
+            android:layout_height="130dp" />
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:background="@drawable/micic"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="100dp"
+            android:layout_height="130dp" />
+    </RelativeLayout>
+    <!-- /Image View -->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,6 @@
     <string name="home">home</string>
     <string name="news">news</string>
     <string name="info">info</string>
+    <string name="titledetail">Title</string>
+    <string name="nodeid">NodeID</string>
 </resources>
