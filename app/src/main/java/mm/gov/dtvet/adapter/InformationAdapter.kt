@@ -1,45 +1,41 @@
 package mm.gov.dtvet.adapter
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.service_item.view.*
 import mm.gov.dtvet.R
-import mm.gov.dtvet.ServiceActivity
 import mm.gov.dtvet.ServiceDetailsActivity
-import mm.gov.dtvet.model.Node
-import mm.gov.dtvet.model.Nodes
 import mm.gov.dtvet.model.Services
 
-class ServiceAdapter(val serve : Services): RecyclerView.Adapter<CustomViewHolder>(){
+class InformationAdapter(val info : Services): RecyclerView.Adapter<InfoViewHolder>(){
 
     val nodeTitles = listOf("First Title", "Second Title", "Third Title")
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InfoViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val cellrowservice  = layoutInflater.inflate(R.layout.service_item, parent, false)
+        val cellrowinfo  = layoutInflater.inflate(R.layout.information_item, parent, false)
 
-        return CustomViewHolder(cellrowservice)
+        return InfoViewHolder(cellrowinfo)
     }
 
     override fun getItemCount(): Int {
-        return serve.nodes.count()
+        return info.nodes.count()
     }
 
-    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: InfoViewHolder, position: Int) {
 
-        val nodetitles = serve.nodes.get(position)
+        val nodetitles = info.nodes.get(position)
 
         holder?.view?.title?.text = nodetitles.node.title
     }
+
 }
 
-class CustomViewHolder(val view : View) : RecyclerView.ViewHolder(view){
+class InfoViewHolder(val view : View) : RecyclerView.ViewHolder(view){
     val nodeTitle =view.title as TextView
     init {
         view.setOnClickListener {

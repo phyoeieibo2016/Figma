@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavtab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/bottomnav"
+        app:menu="@menu/menu_bottom_navigation"/>
+
+    <!--header-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:background="@color/background"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtdashboard"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/backimage"
+            android:text="သင်တန်းကျောင်း/သင်တန်းများ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <!--<ImageView
+            android:layout_marginTop="15dp"
+            android:id="@+id/backimage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back" /> -->
+        <Button
+            android:id="@+id/backimage"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+    </RelativeLayout>
+    <!--/header -->
+
+    <!--heading text for grid view -->
+    <LinearLayout
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="16dp"
+            android:textColor="#000000"
+            android:text="သင်တန်းအမျိုးအစားများ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <!-- /heading text for grid view -->
+
+    <!-- Grid View -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstraints">
+
+        <GridLayout
+            android:layout_marginTop="130dp"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:columnOrderPreserved="false"
+            android:alignmentMode="alignMargins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="9dp"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/minschool"
+                        android:elevation="5dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="ဝန်ကြီးဌာနများအလိုက်ဖွင့်လှစ်ထားရှိသောသင်တန်းကျောင်းများ"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="9dp"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/minschoolsec"
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="ပြည်ပနိုင်ငံများနှင့်ပူးပေါင်းဖွင့်လှစ်လျက်ရှိသောသင်တန်းကျောင်းများ
+"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="9dp"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/minschoolthird"
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="နည်းပညာသက်မွေးပညာနှင့်လေ့ကျင့်ရေးဦးစီးဌာန,,
+"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="9dp"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/minschoolfourth"
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Private သင်တန်းကျောင်းများ"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+    </ScrollView>
+    <!-- /Grid View -->
+
+    <!--List view -->
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/simpleListView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/material_blue_grey_800"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="false" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/book" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electronic Engineering"
+            android:textSize="5dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 နှစ်"
+            android:textColor="gray"
+            android:textSize="12sp" />
+        </ListView>
+    </LinearLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

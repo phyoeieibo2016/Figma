@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        information.setOnClickListener {
-//            val intent = Intent(this, InformationActivity::class.java)
-//            startActivity(intent)
-//        }
+        information.setOnClickListener {
+            val intent = Intent(this, InformationActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

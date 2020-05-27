@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="mm.gov.dtvet">
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".EnglanguageActivity"></activity>-->
-<!--        <activity android:name=".InformationActivity" />-->
+<!--        <activity android:name=".information_item"></activity>-->
+
         <activity android:name=".ServiceActivity" />
-<!--        <activity android:name=".JobActivity" />-->
         <activity android:name=".CourseActivity" />
+        <!-- <activity android:name=".JobActivity" /> -->
+        <activity android:name=".InformationActivity" />
+        <activity android:name=".EnglanguageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
